@@ -4,8 +4,8 @@
 
 # Jayo AsyncStream
 
-`AsyncStream<T>` is an initiative to provide the simplest API to model an async stream of elements that are being
-produced asynchronously.
+`AsyncStream<T>` is an initiative to provide the simplest API to model a stream of elements that are being produced
+asynchronously.
 
 It is available on Maven Central.
 

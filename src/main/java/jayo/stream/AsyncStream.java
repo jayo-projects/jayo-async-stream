@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 /**
- * An async stream of elements that are being produced asynchronously.
+ * A stream of elements that are being produced asynchronously.
  *
  * @param <T> the type of elements in this stream.
  */
@@ -28,7 +28,7 @@ public interface AsyncStream<T> extends Iterable<@NonNull Result<T>> {
     void whenEachCompletes(final @NonNull BiConsumer<? super T, ? super @Nullable Throwable> action);
 
     /**
-     * @return a sequential {@code Stream} that streams the results of this async stream as its source, as they complete
+     * @return a sequential {@link Stream} that streams the results of this async stream as its source, as they complete
      * either successfully or exceptionally.
      * <p>
      * Note: since the source elements are produced asynchronously, there may be a delay before each result is emitted.
@@ -41,7 +41,7 @@ public interface AsyncStream<T> extends Iterable<@NonNull Result<T>> {
     }
 
     /**
-     * @return a sequential {@code Stream} of the successful results of this async stream, ignoring any failures.
+     * @return a sequential {@link Stream} of successful results from this async stream, ignoring any failures.
      */
     default @NonNull Stream<T> streamSuccesses() {
         return stream()
