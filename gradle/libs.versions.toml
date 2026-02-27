@@ -1,0 +1,22 @@
+[versions]
+
+java = "11"
+
+# plugins
+# https://github.com/researchgate/gradle-release/releases
+release = "3.1.0"
+
+# main
+# https://github.com/jayo-projects/jayo-result/tags
+jayoResult = "0.1.0-alpha2"
+# https://github.com/jspecify/jspecify/releases
+jspecify = "1.0.0"
+
+# tests
+# https://mvnrepository.com/artifact/org.assertj/assertj-core
+assertj = "3.27.7"
+# https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+junit = "6.0.2"
+
+[plugins]
+release = { id = "net.researchgate.release", version.ref = "release" }
