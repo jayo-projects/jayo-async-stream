@@ -41,9 +41,9 @@ public interface AsyncStream<T> extends Iterable<@NonNull Result<T>> {
     }
 
     /**
-     * @return a sequential {@link Stream} of successful results from this async stream, ignoring any failures.
+     * @return a sequential {@link Stream} of all successful results from this async stream, ignoring failures.
      */
-    default @NonNull Stream<T> streamSuccesses() {
+    default @NonNull Stream<T> streamAllSuccessful() {
         return stream()
                 .filter(Result::isSuccess)
                 .map(Result::getOrThrow); // will never throw since we filtered only the successful results.
